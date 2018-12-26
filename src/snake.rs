@@ -25,7 +25,7 @@ impl Direction {
     }
 }
 
-#[derive(Debug, Clone)]
+#[derive(Clone)]
 struct Block {
     x: i32,
     y: i32,
@@ -126,7 +126,7 @@ impl Snake {
         }
     }
 
-    pub fn restore_tail(&self) {
+    pub fn restore_tail(&mut self) {
         let block = self.tail.clone().unwrap();
         self.body.push_back(block);
     }
@@ -136,7 +136,7 @@ impl Snake {
 
         for block in &self.body {
             if x == block.x && y == block.y {
-                true
+                return true;
             }
             ch += 1;
 

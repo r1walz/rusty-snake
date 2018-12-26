@@ -1,3 +1,4 @@
+use rand::{thread_rng, Rng};
 use piston_window::*;
 use piston_window::types::Color;
 
@@ -111,7 +112,7 @@ impl Game {
         let (next_x, next_y) = self.snake.next_head(dir);
 
         if self.snake.overlap_tail(next_x, next_y) {
-            false
+            return false;
         }
 
         next_x > 0 && next_y > 0 &&
