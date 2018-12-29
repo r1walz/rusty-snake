@@ -1,4 +1,4 @@
-# Rusty-Snake
+# Rusty-Snake ![build_status](https://travis-ci.com/r1walz/rusty-snake.svg?branch=master)
 
 It is a simple snake game developed by using [Rust](https://rust-lang.org/) and [piston_window](https://github.com/PistonDevelopers/piston_window).
 
